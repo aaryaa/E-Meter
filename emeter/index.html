@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>E Meter</title>
+ <!-- Bootstrap Core CSS -->
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <!-- Custom CSS -->
+ <link href="css/one-page-wonder.css" rel="stylesheet">
+ <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+ <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Navigation -->
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+       <div class="navbar-header">
+           <a class="navbar-brand" href="#">E Meter</a>
+        </div>
+    </div>
+ </nav>
+ <!-- Page Content -->
+    <div class="container">
+	   <h2><center>E Meter</center></h2>
+       <hr class="featurette-divider">
+       <!-- First Featurette -->
+       <div class="row">
+		   <div class="col-md-4" style="border: 1px solid #ccc;border-radius: 12px;">
+			     <center>
+				    <h3 style="border-bottom: 1px solid #ccc;margin-bottom: 30px;">Bulb</h3>
+			     </center>	  
+				  <div class="col-md-6">
+					<img id="myImage"  src="img/off.jpg" width="100px" height="180px">
+					<div class="onoffswitch">
+					   <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+						<label class="onoffswitch-label" for="myonoffswitch">
+							<span class="onoffswitch-inner"></span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				  </div>
+				  <div class="col-md-6">
+						<div class="form-group">
+						   <label for="blubunit">Unit</label>
+						   <input type="number" class="form-control" id="blubunit" >
+						</div>
+						<div class="form-group">
+						   <label for="blubwalt">Watt</label>
+						   <input type="number" class="form-control" id="blubwalt" >
+						</div>
+						<h1 id="bulbtimer"><time>00:00:00</time></h1>
+						<h2 style="display:none;"><span id="bulbtotal"></span></h2>
+						<h3>Rs <span id="bulbbill">0.00</span></h3>
+						<button style="display:none;" id="bulbstart">start</button>
+						<button style="display:none;" id="bulbstop">stop</button>
+						<button style="display:none;" id="bulbclear">clear</button>
+				  </div>
+		   </div>
+		   <div class="col-md-4" style="border: 1px solid #ccc;border-radius: 12px;">
+			     <center>
+				    <h3 style="border-bottom: 1px solid #ccc;margin-bottom: 30px;">Fan</h3>
+			     </center>	  
+				  <div class="col-md-6">
+					<img id="fanImg"  src="img/fanoff.jpg" width="150px" height="180px">
+					<div class="onoffswitch">
+					   <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchFan" checked>
+						<label class="onoffswitch-label" for="myonoffswitchFan">
+							<span class="onoffswitch-inner"></span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				  </div>
+				  <div class="col-md-6">
+						<div class="form-group">
+						   <label for="fanunit">Unit</label>
+						   <input type="number" class="form-control" id="fanunit" >
+						</div>
+						<div class="form-group">
+						   <label for="fanwatt">Watt</label>
+						   <input type="number" class="form-control" id="fanwatt" >
+						</div>
+						<h1 id="fantimer"><time>00:00:00</time></h1>
+						<h2 style="display:none;"><span id="fantotal"></span></h2>
+						<h3>Rs <span id="fanbill">0.00</span></h3>
+						<button style="display:none;" id="fanstart">start</button>
+						<button style="display:none;" id="fanstop">stop</button>
+						<button style="display:none;" id="fanclear">clear</button>
+				  </div>
+		   </div>
+		   <div class="col-md-4" style="border: 1px solid #ccc;border-radius: 12px;">
+			     <center>
+				    <h3 style="border-bottom: 1px solid #ccc;margin-bottom: 30px;">A.C.</h3>
+			     </center>	  
+				  <div class="col-md-6">
+					<img id="myAC"  src="img/acoff.png" width="170px" height="180px">
+					<div class="onoffswitch">
+					   <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchAC" checked>
+						<label class="onoffswitch-label" for="myonoffswitchAC">
+							<span class="onoffswitch-inner"></span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				  </div>
+				  <div class="col-md-6">
+						<div class="form-group">
+						   <label for="unicac">Unit</label>
+						   <input type="number" class="form-control" id="unicac" >
+						</div>
+						<div class="form-group">
+						   <label for="unitwatt">Watt</label>
+						   <input type="number" class="form-control" id="unitwatt" >
+						</div>
+						<h1 id="actimer"><time>00:00:00</time></h1>
+						<h2 style="display:none;"><span id="actotal"></span></h2>
+						<h3>Rs <span id="acbill">0.00</span></h3>
+						<button style="display:none;" id="acstart">start</button>
+						<button style="display:none;" id="acstop">stop</button>
+						<button style="display:none;" id="acclear">clear</button>
+				  </div>
+		   </div>
+	   </div>
+	   <div class="row" style="margin-top:25px;">
+	      
+	      <div class="col-md-12">
+		  <div class="col-md-12" id="show_hide"> Show / Hide table</div>
+		      <table class="table table-striped table-bordered " id="billtable">
+			  <thead>
+			     <tr>
+				    <th>Sno.</th>
+					<th>Device Name</th>
+					<th>Device Image</th>
+					<th>Unit</th>
+					<th>Watt</th>
+					<th>Time</th>
+					<th>Bill</th>
+				 </tr>
+			 </thead>
+<tbody>			 
+				 <tr>
+				   <td>1</td>
+				   <td>Blub</td>
+				   <td><img src="img/off.jpg" width="70px" height="70px"></td>
+				   <td id="blub_table_unit"></td>
+				   <td id="blub_table_watt"></td>
+				   <td id="blub_table_time"></td>
+				   <td id="blub_table_bill"></td>
+				 </tr>
+				 <tr>
+				   <td>2</td>
+				   <td>Fan</td>
+				   <td><img src="img/fanoff.jpg" width="70px" height="70px"></td>
+				   <td id="fan_table_unit"></td>
+				   <td id="fan_table_watt"></td>
+				   <td id="fan_table_time"></td>
+				   <td id="fan_table_bill"></td>
+				 </tr>
+				 <tr>
+				   <td>3</td>
+				   <td>A.C.</td>
+				   <td><img src="img/acoff.png" width="70px" height="70px"></td>
+				   <td id="ac_table_unit"></td>
+				   <td id="ac_table_watt"></td>
+				   <td id="ac_table_time"></td>
+				   <td id="ac_table_bill"></td>
+				 </tr>
+				 <tr>
+				   <td colspan=6 style="text-align: right;"><strong>Total</strong></td>
+				   <td id="alltotalval"></td>
+				 </tr>
+				 </tbody>
+			  </table>
+		  </div>
+		  
+	   </div>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Emeter 2016</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+	<script src="js/jspdf.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+	
+</body>
+
+</html>
